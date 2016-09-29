@@ -236,6 +236,7 @@
  * @endcode
  */
 
+/**
 $databases['default']['default'] = array(
   'driver' => 'pgsql',
   'database' => getenv('DB_NAME'),
@@ -245,6 +246,9 @@ $databases['default']['default'] = array(
   'port' => getenv('DB_PORT'),
   'prefix' => '',
 );
+ */
+
+$databases = array();
 
 /**
  * Access control for update.php script.
