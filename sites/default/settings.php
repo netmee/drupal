@@ -228,6 +228,7 @@
  *     'host' => 'localhost',
  *     'prefix' => '',
  *   );
+ */
     $databases['default']['default'] = array(
       'driver' => 'pgsql',
       'database' => getenv('DB_NAME'),
@@ -237,13 +238,14 @@
       'port' => getenv('DB_PORT'),
       'prefix' => '',
     );
+ /**
  *   $databases['default']['default'] = array(
  *     'driver' => 'sqlite',
  *     'database' => '/path/to/databasefilename',
  *   );
  * @endcode
  */
-$databases = array();
+// $databases = array();
 /**
  * Access control for update.php script.
  *
