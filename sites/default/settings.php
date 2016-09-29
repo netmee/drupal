@@ -228,14 +228,15 @@
  *     'host' => 'localhost',
  *     'prefix' => '',
  *   );
- *   $databases['default']['default'] = array(
- *     'driver' => 'pgsql',
- *     'database' => 'databasename',
- *     'username' => 'username',
- *     'password' => 'password',
- *     'host' => 'localhost',
- *     'prefix' => '',
- *   );
+    $databases['default']['default'] = array(
+      'driver' => 'pgsql',
+      'database' => getenv('DB_NAME'),
+      'username' => getenv('DB_USER'),
+      'password' => getenv('DB_PASS'),
+      'host' => getenv('DB_HOST'),
+      'port' => getenv('DB_PORT'),
+      'prefix' => '',
+    );
  *   $databases['default']['default'] = array(
  *     'driver' => 'sqlite',
  *     'database' => '/path/to/databasefilename',
