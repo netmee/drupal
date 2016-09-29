@@ -223,32 +223,35 @@
  *   $databases['default']['default'] = array(
  *     'driver' => 'mysql',
  *     'database' => 'databasename',
- *     'username' => 'username',
- *     'password' => 'password',
- *     'host' => 'localhost',
- *     'prefix' => '',
- *   );
- *
- *   $databases['default']['default'] = array(
- *     'driver' => 'sqlite',
- *     'database' => '/path/to/databasefilename',
- *   );
- * @endcode
+ *     'username' => 'username',                                                
+ *     'password' => 'password',                                                
+ *     'host' => 'localhost',                                                   
+ *     'prefix' => '',                                                          
+ *   );                                                                         
+ *   $databases['default']['default'] = array(                                  
+ *     'driver' => 'pgsql',                                                     
+ *     'database' => 'databasename',                                            
+ *     'username' => 'username',                                                
+ *     'password' => 'password',                                                
+ *     'host' => 'localhost',                                                   
+ *     'prefix' => '',                                                          
+ *   );                                                                         
+ *   $databases['default']['default'] = array(                                  
+ *     'driver' => 'sqlite',                                                    
+ *     'database' => '/path/to/databasefilename',                               
+ *   );                                                                         
+ * @endcode                                                                     
  */
 
-/**
 $databases['default']['default'] = array(
   'driver' => 'pgsql',
-  'database' => getenv('DB_NAME'),
-  'username' => getenv('DB_USER'),
-  'password' => getenv('DB_PASS'),
-  'host' => getenv('DB_HOST'),
-  'port' => getenv('DB_PORT'),
+  'database' => getenv('DIGITAL_POSTGRESQL_DB_NAME'),
+  'username' => getenv('DIGITAL_POSTGRESQL_DB_USER'),
+  'password' => getenv('DIGITAL_POSTGRESQL_DB_PASSWORD'),
+  'host' => getenv('DIGITAL_POSTGRESQL_DB_HOST'),
+  'port' => getenv('DIGITAL_POSTGRESQL_DB_PORT'),
   'prefix' => '',
 );
- */
-
-$databases = array();
 
 /**
  * Access control for update.php script.
@@ -278,10 +281,9 @@ $update_free_access = FALSE;
  * Example:
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
-
-$drupal_hash_salt = getenv('DRUPAL_HASH_SALT');
-
  */
+ 
+$drupal_hash_salt = getenv('DIGITAL_DRUPAL_HASH_SALT');
 
 /**
  * Base URL (optional).
