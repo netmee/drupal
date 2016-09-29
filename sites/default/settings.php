@@ -278,8 +278,11 @@ $update_free_access = FALSE;
  * Example:
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
+
+$drupal_hash_salt = getenv('DRUPAL_HASH_SALT');
+
  */
-$drupal_hash_salt = getenv('DR_HASH_SALT');
+
 /**
  * Base URL (optional).
  *
